@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giniz/uda-aws-devops4/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giniz/uda-aws-devops4/tree/main)
 
 ## Project Overview
 
