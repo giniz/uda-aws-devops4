@@ -1,0 +1,36 @@
+Create deployment: uda-lab3
+
+deployment.apps/uda-lab3 created
+Wait for uda-lab3 to be ready
+
+NAME                        READY   STATUS              RESTARTS   AGE
+uda-lab3-6b69c9564c-thpvr   0/1     ContainerCreating   0          0s
+Waiting for deployment "uda-lab3" rollout to finish: 0 of 1 updated replicas are available...
+deployment "uda-lab3" successfully rolled out
+NAME                        READY   STATUS    RESTARTS   AGE
+uda-lab3-6b69c9564c-thpvr   1/1     Running   0          2s
+Forward port for uda-lab3
+
+Listening for logs of uda-lab3
+
+Forwarding from 0.0.0.0:8000 -> 80
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 132-258-862
+Handling connection for 8000
+[2022-09-21 15:23:26,519] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-09-21 15:23:26,533] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-09-21 15:23:26,543] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-09-21 15:23:26,547] INFO in app: Prediction Result: [20.35373177134412]
+127.0.0.1 - - [21/Sep/2022 15:23:26] "POST /predict HTTP/1.1" 200 -
